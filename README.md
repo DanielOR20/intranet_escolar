@@ -42,11 +42,11 @@ Al abrir `index.html`, se muestra la pantalla de login. Podés entrar con
 cualquiera de estos usuarios de prueba (ya vienen cargados la primera
 vez que se abre el sistema):
 
-| Rol             | Usuario      | Contraseña      |
-| --------------- | ------------ | --------------- |
-| Administración  | `admin`      | `admin123`      |
-| Docente         | `docente`    | `docente123`    |
-| Estudiante      | `estudiante` | `estudiante123` |
+| Rol             | Usuario            | Contraseña      |
+| --------------- | ------------------ | --------------- |
+| Administración  | `admindaniel`      | `12345`         |
+| Docente         | `docentedaniel`    | `12345`         |
+| Estudiante      | `estudiantedaniel` | `12345`         |
 
 Cada rol es redirigido automáticamente a su propio panel
 (`admin.html`, `docente.html` o `estudiante.html`).
