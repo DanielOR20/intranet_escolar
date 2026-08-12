@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Administración - Intranet Escolar</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="barra-superior">
+    <h1>Panel de Administración</h1>
+    <div class="info-usuario">
+      <span>Hola, <strong id="nombre-usuario-activo"></strong></span>
+      <button id="btn-cerrar-sesion" class="boton-secundario">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Gestión de usuarios -->
+    <section class="tarjeta">
+      <h2 id="titulo-form-usuario">Agregar usuario</h2>
+      <form id="form-usuario" class="grilla-formulario">
+        <div class="campo-formulario">
+          <label for="nombre-nuevo">Nombre completo</label>
+          <input type="text" id="nombre-nuevo" required />
+        </div>
+        <div class="campo-formulario">
+          <label for="usuario-nuevo">Usuario</label>
+          <input type="text" id="usuario-nuevo" required />
+        </div>
+        <div class="campo-formulario">
+          <label for="clave-nueva">Contraseña</label>
+          <input type="text" id="clave-nueva" required />
+        </div>
+        <div class="campo-formulario">
+          <label for="rol-nuevo">Rol</label>
+          <select id="rol-nuevo" required>
+            <option value="administracion">Administración</option>
+            <option value="docente">Docente</option>
+            <option value="estudiante">Estudiante / Familia</option>
+          </select>
+        </div>
+        <div class="acciones-formulario">
+          <button type="submit" class="boton-principal">Guardar</button>
+          <button type="button" id="btn-cancelar-edicion" class="boton-secundario">Cancelar</button>
+        </div>
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Usuario</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla-usuarios"></tbody>
+      </table>
+    </section>
+
+    <!-- Notas / asistencia (solo lectura) -->
+    <section class="tarjeta">
+      <h2>Notas y asistencia registradas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Estudiante</th>
+            <th>Materia</th>
+            <th>Nota</th>
+            <th>Asistencia</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla-registros"></tbody>
+      </table>
+    </section>
+
+    <!-- Tablón de avisos -->
+    <section class="tarjeta">
+      <h2>Publicar aviso</h2>
+      <form id="form-aviso">
+        <div class="campo-formulario">
+          <label for="titulo-aviso">Título</label>
+          <input type="text" id="titulo-aviso" required />
+        </div>
+        <div class="campo-formulario">
+          <label for="contenido-aviso">Contenido</label>
+          <textarea id="contenido-aviso" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="boton-principal">Publicar</button>
+      </form>
+
+      <h2 style="margin-top: 1.5rem;">Tablón de avisos</h2>
+      <div id="lista-avisos"></div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
