@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Estudiante - Intranet Escolar</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="barra-superior">
+    <h1>Panel de Estudiante / Familia</h1>
+    <div class="info-usuario">
+      <span>Hola, <strong id="nombre-usuario-activo"></strong></span>
+      <button id="btn-cerrar-sesion" class="boton-secundario">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="tarjeta">
+      <h2>Mis notas y asistencia</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Materia</th>
+            <th>Nota</th>
+            <th>Asistencia</th>
+            <th>Fecha</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla-registros"></tbody>
+      </table>
+    </section>
+
+    <section class="tarjeta">
+      <h2>Tablón de avisos</h2>
+      <div id="lista-avisos"></div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/estudiante.js"></script>
+</body>
+</html>

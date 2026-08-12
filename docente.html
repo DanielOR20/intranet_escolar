@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Docente - Intranet Escolar</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="barra-superior">
+    <h1>Panel de Docente</h1>
+    <div class="info-usuario">
+      <span>Hola, <strong id="nombre-usuario-activo"></strong></span>
+      <button id="btn-cerrar-sesion" class="boton-secundario">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Cargar notas / asistencia -->
+    <section class="tarjeta">
+      <h2>Cargar nota / asistencia</h2>
+      <form id="form-registro" class="grilla-formulario">
+        <div class="campo-formulario">
+          <label for="select-estudiante">Estudiante</label>
+          <select id="select-estudiante" required></select>
+        </div>
+        <div class="campo-formulario">
+          <label for="materia">Materia</label>
+          <input type="text" id="materia" required />
+        </div>
+        <div class="campo-formulario">
+          <label for="nota">Nota (0-100)</label>
+          <input type="number" id="nota" min="0" max="100" required />
+        </div>
+        <div class="campo-formulario">
+          <label for="asistencia">Asistencia</label>
+          <select id="asistencia" required>
+            <option value="presente">Presente</option>
+            <option value="ausente">Ausente</option>
+            <option value="tardanza">Tardanza</option>
+          </select>
+        </div>
+        <div class="acciones-formulario">
+          <button type="submit" class="boton-principal">Guardar</button>
+        </div>
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Estudiante</th>
+            <th>Materia</th>
+            <th>Nota</th>
+            <th>Asistencia</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla-registros"></tbody>
+      </table>
+    </section>
+
+    <!-- Tablón de avisos -->
+    <section class="tarjeta">
+      <h2>Publicar aviso</h2>
+      <form id="form-aviso">
+        <div class="campo-formulario">
+          <label for="titulo-aviso">Título</label>
+          <input type="text" id="titulo-aviso" required />
+        </div>
+        <div class="campo-formulario">
+          <label for="contenido-aviso">Contenido</label>
+          <textarea id="contenido-aviso" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="boton-principal">Publicar</button>
+      </form>
+
+      <h2 style="margin-top: 1.5rem;">Tablón de avisos</h2>
+      <div id="lista-avisos"></div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/docente.js"></script>
+</body>
+</html>
