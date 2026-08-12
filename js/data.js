@@ -27,22 +27,22 @@ function inicializarDatosSiHaceFalta() {
       {
         id: "u_admin",
         nombre: "Daniel Administrador",
-        usuario: "admindaniel",
-        clave: "daniel123",
+        usuario: "admin",
+        clave: "12345",
         rol: "administracion",
       },
       {
         id: "u_docente",
         nombre: "Daniel Docente",
         usuario: "docentedaniel",
-        clave: "daniel123",
+        clave: "12345",
         rol: "docente",
       },
       {
         id: "u_estudiante",
         nombre: "Daniel Estudiante",
         usuario: "estudiantedaniel",
-        clave: "daniel123",
+        clave: "12345",
         rol: "estudiante",
       },
     ];
