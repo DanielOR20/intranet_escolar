@@ -27,7 +27,7 @@ function inicializarDatosSiHaceFalta() {
       {
         id: "u_admin",
         nombre: "Daniel Administrador",
-        usuario: "admin",
+        usuario: "admindaniel",
         clave: "12345",
         rol: "administracion",
       },
