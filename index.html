@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intranet Escolar - Iniciar sesión</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="contenedor-login">
+    <div class="tarjeta-login">
+      <h1>Intranet Escolar</h1>
+      <p>Iniciá sesión con tu usuario y contraseña.</p>
+
+      <form id="form-login">
+        <div class="campo-formulario">
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" name="usuario" required autocomplete="username" />
+        </div>
+
+        <div class="campo-formulario">
+          <label for="clave">Contraseña</label>
+          <input type="password" id="clave" name="clave" required autocomplete="current-password" />
+        </div>
+
+        <p id="mensaje-error" class="mensaje-error" role="alert" hidden></p>
+
+        <button type="submit" class="boton-principal">Ingresar</button>
+      </form>
+
+      <div class="pista-credenciales">
+        <strong>Usuarios de prueba:</strong><br />
+        Administración: <code>admin</code> / <code>admin123</code><br />
+        Docente: <code>docente</code> / <code>docente123</code><br />
+        Estudiante: <code>estudiante</code> / <code>estudiante123</code>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

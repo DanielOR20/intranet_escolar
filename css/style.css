@@ -1,0 +1,261 @@
+/* style.css
+   ---------------------------------------------------------
+   🍎 Manzanita: un solo archivo de estilos para las 4
+   páginas (login y los 3 paneles), pensado simple y con
+   buen contraste para que sea accesible.
+   --------------------------------------------------------- */
+
+:root {
+  --color-primario: #2f5d50;
+  --color-primario-oscuro: #1e3f36;
+  --color-fondo: #f4f6f5;
+  --color-tarjeta: #ffffff;
+  --color-texto: #1c1c1c;
+  --color-borde: #d7ddda;
+  --color-peligro: #b3261e;
+  --color-peligro-oscuro: #8c1d17;
+  --radio: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-primario);
+}
+
+/* ---------- Login ---------- */
+
+.contenedor-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.tarjeta-login {
+  background: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 2rem;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.tarjeta-login h1 {
+  margin-top: 0;
+  color: var(--color-primario-oscuro);
+  font-size: 1.5rem;
+}
+
+.pista-credenciales {
+  background: #eef3f1;
+  border-radius: var(--radio);
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.pista-credenciales code {
+  background: #fff;
+  padding: 0 0.3rem;
+  border-radius: 4px;
+}
+
+/* ---------- Formularios ---------- */
+
+.campo-formulario {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid #8ab4a3;
+  outline-offset: 1px;
+}
+
+.mensaje-error {
+  color: var(--color-peligro);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* ---------- Botones ---------- */
+
+.boton-principal {
+  background: var(--color-primario);
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.boton-principal:hover {
+  background: var(--color-primario-oscuro);
+}
+
+.boton-secundario {
+  background: #fff;
+  color: var(--color-primario-oscuro);
+  border: 1px solid var(--color-primario);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.boton-peligro {
+  background: var(--color-peligro);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.boton-peligro:hover {
+  background: var(--color-peligro-oscuro);
+}
+
+/* ---------- Layout de los paneles ---------- */
+
+.barra-superior {
+  background: var(--color-primario-oscuro);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.barra-superior h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.barra-superior .info-usuario {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+section.tarjeta {
+  background: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+section.tarjeta h2 {
+  margin-top: 0;
+  color: var(--color-primario-oscuro);
+  font-size: 1.15rem;
+}
+
+/* ---------- Tablas ---------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--color-borde);
+  font-size: 0.9rem;
+}
+
+th {
+  color: var(--color-primario-oscuro);
+}
+
+.celda-acciones {
+  display: flex;
+  gap: 0.4rem;
+}
+
+/* ---------- Formulario en grilla ---------- */
+
+.grilla-formulario {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  align-items: end;
+}
+
+.acciones-formulario {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ---------- Avisos ---------- */
+
+.tarjeta-aviso {
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background: #fbfcfb;
+}
+
+.tarjeta-aviso-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tarjeta-aviso h3 {
+  margin: 0 0 0.4rem 0;
+}
+
+.tarjeta-aviso-meta {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0.3rem 0 0 0;
+}
