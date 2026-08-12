@@ -1,13 +1,3 @@
-/*
-  docente.js
-  ---------------------------------------------------------
-  🍎 Manzanita: el docente puede:
-    - ver la lista de estudiantes
-    - cargar notas/asistencia para un estudiante
-    - ver el tablón de avisos y publicar avisos nuevos
-  ---------------------------------------------------------
-*/
-
 let sesion;
 
 document.addEventListener("DOMContentLoaded", () => {

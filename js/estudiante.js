@@ -1,12 +1,3 @@
-/*
-  estudiante.js
-  ---------------------------------------------------------
-  🍎 Manzanita: el estudiante/familia SOLO puede ver:
-    - sus propias notas y asistencia (nunca las de otros)
-    - el tablón de avisos (solo lectura)
-  ---------------------------------------------------------
-*/
-
 let sesion;
 
 document.addEventListener("DOMContentLoaded", () => {

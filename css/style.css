@@ -1,10 +1,3 @@
-/* style.css
-   ---------------------------------------------------------
-   🍎 Manzanita: un solo archivo de estilos para las 4
-   páginas (login y los 3 paneles), pensado simple y con
-   buen contraste para que sea accesible.
-   --------------------------------------------------------- */
-
 :root {
   --color-primario: #2f5d50;
   --color-primario-oscuro: #1e3f36;

@@ -1,19 +1,3 @@
-/*
-  sesion.js
-  ---------------------------------------------------------
-  🍎 Manzanita: este archivo responde una sola pregunta:
-  "¿quién soy y tengo permiso de estar en esta página?"
-
-  Cuando alguien inicia sesión (login.js), guardamos su
-  usuario en sessionStorage bajo la clave SESSION_KEY.
-  Cada panel (admin.html, docente.html, estudiante.html)
-  llama a protegerPagina("rolQueDebeTener") apenas carga,
-  para:
-    - mandar al login si nadie inició sesión
-    - mandar al login si el rol no corresponde a esa página
-  ---------------------------------------------------------
-*/
-
 const SESSION_KEY = "intranet_sesion_activa";
 
 function iniciarSesion(usuario) {

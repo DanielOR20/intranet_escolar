@@ -1,19 +1,3 @@
-/*
-  data.js
-  ---------------------------------------------------------
-  🍎 Manzanita: este archivo es el "cerebro de los datos".
-  Todo lo que el sistema guarda (usuarios, notas/asistencia,
-  avisos) vive en localStorage del navegador. Este archivo
-  se encarga de:
-    1. Crear datos de ejemplo la primera vez que se usa
-       (seed data), para que no arranques con todo vacío.
-    2. Dar funciones simples para leer y guardar cada cosa,
-       así los demás archivos (.js de cada panel) no tocan
-       localStorage directamente, sino que llaman a estas
-       funciones.
-  ---------------------------------------------------------
-*/
-
 const DB_KEYS = {
   USERS: "intranet_usuarios",
   RECORDS: "intranet_notas_asistencia",
@@ -42,23 +26,23 @@ function inicializarDatosSiHaceFalta() {
     const usuariosIniciales = [
       {
         id: "u_admin",
-        nombre: "Ana Administradora",
-        usuario: "admin",
-        clave: "admin123",
+        nombre: "Daniel Administrador",
+        usuario: "admindaniel",
+        clave: "daniel123",
         rol: "administracion",
       },
       {
         id: "u_docente",
-        nombre: "Diego Docente",
-        usuario: "docente",
-        clave: "docente123",
+        nombre: "Daniel Docente",
+        usuario: "docentedaniel",
+        clave: "daniel123",
         rol: "docente",
       },
       {
         id: "u_estudiante",
-        nombre: "Emma Estudiante",
-        usuario: "estudiante",
-        clave: "estudiante123",
+        nombre: "Daniel Estudiante",
+        usuario: "estudiantedaniel",
+        clave: "daniel123",
         rol: "estudiante",
       },
     ];
@@ -70,7 +54,7 @@ function inicializarDatosSiHaceFalta() {
       {
         id: generarId("reg"),
         estudianteId: "u_estudiante",
-        estudianteNombre: "Emma Estudiante",
+        estudianteNombre: "Daniel Estudiante",
         materia: "Matemática",
         nota: 85,
         asistencia: "presente",
@@ -87,7 +71,7 @@ function inicializarDatosSiHaceFalta() {
         id: generarId("aviso"),
         titulo: "Bienvenidos al ciclo lectivo",
         contenido: "Este es el tablón de avisos de la intranet escolar.",
-        autor: "Ana Administradora",
+        autor: "Daniel Administrador",
         fecha: new Date().toISOString().slice(0, 10),
       },
     ];

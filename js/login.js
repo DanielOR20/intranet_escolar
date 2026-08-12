@@ -1,12 +1,3 @@
-/*
-  login.js
-  ---------------------------------------------------------
-  🍎 Manzanita: valida usuario y clave contra la lista de
-  usuarios guardada por data.js, y si coincide, guarda la
-  sesión y redirige al panel correspondiente según el rol.
-  ---------------------------------------------------------
-*/
-
 document.addEventListener("DOMContentLoaded", () => {
   // Si ya había una sesión activa, mandamos directo a su panel
   const sesionExistente = obtenerSesion();

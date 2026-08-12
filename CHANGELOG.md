@@ -22,8 +22,4 @@ archivo.
 - Datos de ejemplo (usuarios, notas y avisos) que se cargan
   automáticamente la primera vez que se abre el sistema.
 
-<!--
-🍎 Manzanita: a medida que agregues funcionalidades nuevas, sumá una
-nueva sección con la fecha o el número de versión, siguiendo el mismo
-formato: Agregado / Cambiado / Corregido / Eliminado.
--->
+

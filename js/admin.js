@@ -1,13 +1,3 @@
-/*
-  admin.js
-  ---------------------------------------------------------
-  🍎 Manzanita: el panel de administración puede:
-    - ver, agregar, editar y borrar usuarios (cualquier rol)
-    - ver el tablón de avisos completo y publicar avisos
-    - ver todas las notas/asistencia cargadas
-  ---------------------------------------------------------
-*/
-
 let sesion;
 
 document.addEventListener("DOMContentLoaded", () => {
